@@ -17,59 +17,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/edittext_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_logIn"
-        app:layout_constraintTop_toBottomOf="@id/txtview_loginTitle">
-
-        <EditText
-            android:id="@+id/edittext_id"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:background="@color/colorPrimary" />
-
-        <EditText
-            android:id="@+id/edittext_pw"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:background="@color/colorAccent" />
-    </LinearLayout>
-    <!--
     <EditText
         android:id="@+id/edittext_id"
-        android:layout_width="200dp"
+        android:layout_width="240dp"
         android:layout_height="40dp"
         android:background="@color/colorPrimary"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/btn_logIn"
-        app:layout_constraintTop_toBottomOf="@id/txtview_loginTitle" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtview_loginTitle"/>
 
     <EditText
         android:id="@+id/edittext_pw"
-        android:layout_width="200dp"
+        android:layout_width="240dp"
         android:layout_height="40dp"
         android:background="@color/colorAccent"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/btn_logIn"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edittext_id"/>
-        -->
-    <Button
-        android:id="@+id/btn_logIn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@id/txtview_loginTitle"
-        app:layout_constraintLeft_toRightOf="@id/edittext_input"
-        app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
         android:id="@+id/btn_gmailSignUp"
@@ -78,7 +42,7 @@
         android:text="@string/gmail_signup"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edittext_input"/>
+        app:layout_constraintTop_toBottomOf="@id/edittext_pw"/>
 
     <Button
         android:id="@+id/btn_emailSignUp"
@@ -88,5 +52,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_gmailSignUp"/>
+
 
 </android.support.constraint.ConstraintLayout>
