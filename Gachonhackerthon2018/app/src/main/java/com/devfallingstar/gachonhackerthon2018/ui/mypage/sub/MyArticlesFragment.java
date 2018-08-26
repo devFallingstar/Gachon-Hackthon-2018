@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.devfallingstar.gachonhackerthon2018.R;
 
@@ -24,9 +26,13 @@ public class MyArticlesFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    static final String[] ARTI_ITEM = {"1", "2", "3"};
+    private ListView mlist;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,8 +71,14 @@ public class MyArticlesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_articles, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_articles,null);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.mypage_item,R.id.list_txt, ARTI_ITEM);
+
+        mlist = view.findViewById(R.id.article_list_view);
+        mlist.setAdapter(adapter);
+        return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

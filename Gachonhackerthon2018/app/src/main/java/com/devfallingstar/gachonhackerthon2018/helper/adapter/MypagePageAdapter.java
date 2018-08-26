@@ -1,4 +1,4 @@
-package com.devfallingstar.gachonhackerthon2018.helper.fragmentadapter;
+package com.devfallingstar.gachonhackerthon2018.helper.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

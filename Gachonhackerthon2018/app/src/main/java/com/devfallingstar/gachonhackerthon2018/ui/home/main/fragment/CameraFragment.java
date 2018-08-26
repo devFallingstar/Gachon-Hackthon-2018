@@ -1,4 +1,4 @@
-package com.devfallingstar.gachonhackerthon2018.ui.mypage.sub;
+package com.devfallingstar.gachonhackerthon2018.ui.home.main.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,20 +7,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import com.devfallingstar.gachonhackerthon2018.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MyPicturesFragment.OnFragmentInteractionListener} interface
+ * {@link CameraFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link MyPicturesFragment#newInstance} factory method to
+ * Use the {@link CameraFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyPicturesFragment extends Fragment {
+public class CameraFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,10 +31,7 @@ public class MyPicturesFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    static final String[] PIC_ITEM = {"4", "5", "6"};
-    private ListView mlist;
-
-    public MyPicturesFragment() {
+    public CameraFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +41,11 @@ public class MyPicturesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyPicturesFragment.
+     * @return A new instance of fragment CameraFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyPicturesFragment newInstance(String param1, String param2) {
-        MyPicturesFragment fragment = new MyPicturesFragment();
+    public static CameraFragment newInstance(String param1, String param2) {
+        CameraFragment fragment = new CameraFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -70,12 +66,7 @@ public class MyPicturesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_pictures,null);
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), R.layout.mypage_item, R.id.list_txt, PIC_ITEM);
-
-        mlist = view.findViewById(R.id.pictures_list_view);
-        mlist.setAdapter(adapter);
-        return view;
+        return inflater.inflate(R.layout.fragment_camera, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
