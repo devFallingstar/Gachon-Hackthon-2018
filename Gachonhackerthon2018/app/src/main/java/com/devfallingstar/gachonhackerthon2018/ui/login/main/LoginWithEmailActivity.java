@@ -59,7 +59,7 @@ public class LoginWithEmailActivity extends AppCompatActivity {
                     startActivity(i);
                 }else{
                     Log.e("Error", task.getException().toString());
-                    Toast.makeText(LoginWithEmailActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginWithEmailActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });

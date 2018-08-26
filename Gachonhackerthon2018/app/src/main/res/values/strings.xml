@@ -4,10 +4,10 @@
     <string name="gmail_signup">Sign up with Gmail</string>
     <string name="email_signup">Sign up with Email</string>
 
-    <string name = "user_name">Name</string>
-    <string name = "email_txt">Email Address</string>
-    <string name = "password_txt">Password</string>
-    <string name = "regist_btn">Regist</string>
+    <string name="user_name">Name</string>
+    <string name="email_txt">Email Address</string>
+    <string name="password_txt">Password</string>
+    <string name="regist_btn">Regist</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
