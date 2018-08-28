@@ -18,4 +18,9 @@ public class HomeActivity extends BasicActivity implements BasicActivityInterfac
     public void initializeUI() {
 
     }
+
+    @Override
+    public void initializeVariables() {
+
+    }
 }
