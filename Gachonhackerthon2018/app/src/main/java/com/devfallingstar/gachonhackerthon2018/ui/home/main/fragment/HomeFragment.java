@@ -1,15 +1,21 @@
 package com.devfallingstar.gachonhackerthon2018.ui.home.main.fragment;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.devfallingstar.gachonhackerthon2018.R;
+import com.devfallingstar.gachonhackerthon2018.ui.functional.detail.PictureDetailActivity;
+import com.devfallingstar.gachonhackerthon2018.ui.functional.detail.PictureWithArticleActivity;
+import com.devfallingstar.gachonhackerthon2018.ui.functional.write.PictureTakeActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +25,7 @@ import com.devfallingstar.gachonhackerthon2018.R;
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,6 +36,7 @@ public class HomeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private ImageView homeImg;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -66,7 +73,22 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View homeView = inflater.inflate(R.layout.fragment_home, container, false);
+        homeImg = homeView.findViewById(R.id.home_img);
+        homeImg.setOnClickListener(this);
+        return homeView;
+    }
+
+    @Override public void onClick(View v){
+        switch (v.getId()){
+            case R.id.home_img:
+                Intent intent = new Intent(getActivity(), PictureWithArticleActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

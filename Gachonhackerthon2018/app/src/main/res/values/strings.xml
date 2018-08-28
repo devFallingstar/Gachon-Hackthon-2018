@@ -9,6 +9,12 @@
     <string name="password_txt">Password</string>
     <string name="regist_btn">Regist</string>
 
+    <string name="back">Back</string>
+    <string name="write">Write</string>
+
+    <string name="title">Put Title</string>
+    <string name="content">Put the contents of title</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

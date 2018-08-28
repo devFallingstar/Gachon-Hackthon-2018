@@ -25,12 +25,17 @@ public class HomeActivity extends BasicActivity implements BasicActivityInterfac
         MyPicturesFragment.OnFragmentInteractionListener,
         MyArticlesFragment.OnFragmentInteractionListener{
     BottomNavigationView bottomNavigationView;
+    FragmentTransaction transaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         bottomNavigationView = findViewById(R.id.navigation_view);
+
+       transaction = getSupportFragmentManager().beginTransaction();
+       transaction.replace(R.id.frame_container, HomeFragment.newInstance("Home", "arg2"));
+       transaction.commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -46,8 +51,11 @@ public class HomeActivity extends BasicActivity implements BasicActivityInterfac
                     case R.id.navigation_camera:
                         selectedFragment = CameraFragment.newInstance("Camera", "arg2");
                         break;
+                    default:
+                        selectedFragment = HomeFragment.newInstance("Home", "arg2");
+                        break;
                 }
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame_container, selectedFragment);
                 transaction.commit();
                 return true;
